@@ -1,0 +1,6 @@
+com/virtualpairprogrammers/api/FleetmanApiGateway.class
+com/virtualpairprogrammers/api/domain/VehiclePosition.class
+com/virtualpairprogrammers/api/controllers/VehicleController.class
+com/virtualpairprogrammers/api/domain/LatLong.class
+com/virtualpairprogrammers/api/services/PositionTrackingExternalService.class
+com/virtualpairprogrammers/api/services/RemotePositionMicroserviceCalls.class

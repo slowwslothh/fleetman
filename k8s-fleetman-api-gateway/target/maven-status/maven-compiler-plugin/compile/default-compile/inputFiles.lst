@@ -1,0 +1,6 @@
+/home/zied/Desktop/application/k8s-fleetman-api-gateway/src/main/java/com/virtualpairprogrammers/api/domain/VehiclePosition.java
+/home/zied/Desktop/application/k8s-fleetman-api-gateway/src/main/java/com/virtualpairprogrammers/api/controllers/VehicleController.java
+/home/zied/Desktop/application/k8s-fleetman-api-gateway/src/main/java/com/virtualpairprogrammers/api/FleetmanApiGateway.java
+/home/zied/Desktop/application/k8s-fleetman-api-gateway/src/main/java/com/virtualpairprogrammers/api/services/PositionTrackingExternalService.java
+/home/zied/Desktop/application/k8s-fleetman-api-gateway/src/main/java/com/virtualpairprogrammers/api/services/RemotePositionMicroserviceCalls.java
+/home/zied/Desktop/application/k8s-fleetman-api-gateway/src/main/java/com/virtualpairprogrammers/api/domain/LatLong.java
