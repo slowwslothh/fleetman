@@ -2,6 +2,13 @@ kind: pipeline
 type: docker
 name: position-simulator
 
+trigger:
+  branch:
+    - main
+  event:
+    - push
+    - custom
+
 steps:
   - name: build
     image: maven:3.8.4-jdk-11
