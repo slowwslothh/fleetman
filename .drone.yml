@@ -1,0 +1,21 @@
+kind: pipeline
+type: docker
+name: position-simulator
+
+steps:
+  - name: clone
+    image: plugins/git
+    settings:
+      depth: 50
+
+  - name: build
+    image: maven:3.8.4-jdk-11
+    commands:
+      - cd microservice-source-code/release2/position-simulator
+      - mvn clean install
+
+  - name: test
+    image: maven:3.8.4-jdk-11
+    commands:
+      - cd microservice-source-code/release2/position-simulator
+      - mvn test
