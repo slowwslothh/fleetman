@@ -7,3 +7,14 @@ steps:
     image: plugins/git
     settings:
       depth: 50
+  - name: build
+    image: maven:3.8.4-jdk-11
+    commands:
+      - cd k8s-fleetman-position-simulator
+      - mvn clean install
+
+  - name: test
+    image: maven:3.8.4-jdk-11
+    commands:
+      - cd k8s-fleetman-position-simulator
+      - mvn test
