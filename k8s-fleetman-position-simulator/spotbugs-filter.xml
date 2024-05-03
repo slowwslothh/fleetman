@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+    <!-- Ignore specific bug categories -->
+    <Match>
+        <Bug category="SECURITY" />
+        <Bug category="BAD_PRACTICE" />
+        <Bug category="INTERNATIONALIZATION" />
+        <Bug category="MT_CORRECTNESS" />
+        <Bug category="PERFORMANCE" />
+        <Bug category="DODGY_CODE" />
+    </Match>
+    <!-- Ignore specific bug instances -->
+    <Match>
+        <Bug pattern="SECURITY.PRINT_STACK_TRACE" />
+        <Bug pattern="NP_NULL_ON_SOME_PATH_EXCEPTION" />
+        <!-- Add more specific bug patterns as needed -->
+    </Match>
+</FindBugsFilter>
