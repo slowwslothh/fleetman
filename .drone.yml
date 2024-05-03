@@ -9,12 +9,12 @@ trigger:
     - custom
 steps:
   - name: build
-    image: maven:3.8.4-jdk-11
+    image: maven:3.8.4-jdk-17
     commands:
       - cd k8s-fleetman-position-simulator
       - mvn clean install
   - name: test
-    image: maven:3.8.4-jdk-11
+    image: maven:3.8.4-jdk-17
     commands:
       - cd k8s-fleetman-position-simulator
       - mvn test
