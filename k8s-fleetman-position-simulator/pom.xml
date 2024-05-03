@@ -60,16 +60,22 @@
 				</configuration>
 			</plugin>
 			<plugin>
-            			<groupId>com.github.spotbugs</groupId>
-            			<artifactId>spotbugs-maven-plugin</artifactId>
-            			<version>4.3.0</version>
-            			<executions>
-                			<execution>
-                    				<id>spotbugs-check</id>
-                    				<phase>verify</phase>
-                    		<goals>
-                        		<goal>check</goal>
-                    		</goals>
+            <groupId>com.github.spotbugs</groupId>
+            <artifactId>spotbugs-maven-plugin</artifactId>
+            <version>4.3.0</version>
+            <configuration>
+                <effort>Max</effort>
+                <threshold>Low</threshold>
+                <!-- Configure any additional options or settings as needed -->
+                <excludeFilterFile>${project.basedir}/spotbugs-exclude.xml</excludeFilterFile>
+            </configuration>
+            <executions>
+                <execution>
+                    <id>spotbugs-check</id>
+                    <phase>verify</phase>
+                    <goals>
+                        <goal>check</goal>
+                    </goals>
                 </execution>
             </executions>
         </plugin>
