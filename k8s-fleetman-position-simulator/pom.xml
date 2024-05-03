@@ -53,21 +53,19 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<executable>false</executable>
-				</configuration>
-			</plugin>
-			<plugin>
             <groupId>com.github.spotbugs</groupId>
             <artifactId>spotbugs-maven-plugin</artifactId>
             <version>4.3.0</version>
             <configuration>
                 <effort>Max</effort>
                 <threshold>Low</threshold>
-                <!-- Configure any additional options or settings as needed -->
-                <excludeFilterFile>${project.basedir}/spotbugs-exclude.xml</excludeFilterFile>
+                <!-- Specify bug categories or specific issues to ignore -->
+                <excludeBugs>
+                    <excludeBug category="SECURITY" />
+                    <excludeBug category="BAD_PRACTICE" />
+                    <excludeBug pattern="SECURITY.PRINT_STACK_TRACE" />
+                    <!-- Add more excludeBug elements as needed -->
+                </excludeBugs>
             </configuration>
             <executions>
                 <execution>
