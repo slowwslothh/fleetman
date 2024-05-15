@@ -23,7 +23,7 @@ steps:
     image: owasp/dependency-check:latest
     commands:
       - /usr/share/dependency-check/bin/dependency-check.sh \
-      --project k8s-fleetman-position-simulator \
-      --scan /drone/src/fleetman/k8s-fleetman-position-simulator \
-      --out simulator.html
+       --project k8s-fleetman-position-simulator \
+       --scan /drone/src/fleetman/k8s-fleetman-position-simulator \
+       --out simulator.html
       
