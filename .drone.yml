@@ -23,3 +23,4 @@ steps:
     commands:
       - /usr/share/dependency-check/bin/dependency-check.sh --project simulator --scan drone/src/k8s-fleetman-position-simulator --out simulator.html
 
+
