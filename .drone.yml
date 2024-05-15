@@ -19,4 +19,3 @@ steps:
       - cd k8s-fleetman-position-simulator
       - mvn test
   
-
