@@ -52,6 +52,24 @@
 	</dependencies>
 	<build>
 	<plugins>
+		<plugin>
+            <groupId>org.owasp</groupId>
+            <artifactId>dependency-check-maven</artifactId>
+            <version>6.2.2</version> <!-- Check for the latest version -->
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>check</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <formats>
+                    <format>HTML</format>
+                </formats>
+                <failBuildOnCVSS>11</failBuildOnCVSS> <!-- Set a high number to not fail the build -->
+            </configuration>
+        </plugin>
     </plugins>
 		<resources>
 			<resource>
