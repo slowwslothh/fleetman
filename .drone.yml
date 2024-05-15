@@ -22,6 +22,5 @@ steps:
   - name: dependency_check
     image: owasp/dependency-check:latest
     commands:
-      - cd k8s-fleetman-position-simulator
-      - /usr/share/dependency-check/bin/dependency-check.sh --project k8s-fleetman-position-simulator --scan k8s-fleetman-position-simulator --out simulator.html
-      
+      - dependency-check.sh --scan /drone/src/k8s-fleetman-position-simulator
+   
