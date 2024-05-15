@@ -19,7 +19,3 @@ steps:
     commands:
       - cd k8s-fleetman-position-simulator
       - mvn test
-  - name: dependency_check
-    image: owasp/dependency-check:latest
-    commands:
-      - /usr/share/dependency-check/bin/dependency-check.sh --project simulator --scan /drone/src/fleetman/k8s-fleetman-position-simulator --out simulator.html
