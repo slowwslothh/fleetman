@@ -51,11 +51,17 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<plugins>
+	<plugins>
         <plugin>
             <groupId>com.github.spotbugs</groupId>
             <artifactId>spotbugs-maven-plugin</artifactId>
             <version>4.3.0</version>
+            <configuration>
+                <effort>Max</effort>
+                <threshold>Low</threshold>
+                <!-- Specify the custom filter file -->
+                <excludeFilterFile>spotbugs-filter.xml</excludeFilterFile>
+            </configuration>
             <executions>
                 <execution>
                     <id>spotbugs-check</id>
