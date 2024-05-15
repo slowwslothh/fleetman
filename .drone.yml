@@ -22,7 +22,7 @@ steps:
   - name: dependency_check
     image: owasp/dependency-check:latest
     commands:
-        - /usr/share/dependency-check/bin/dependency-check.sh \
+      - /usr/share/dependency-check/bin/dependency-check.sh \
       --scan /drone/src/fleetman/k8s-fleetman-position-simulator \
       --format HTML \
       --project k8s-fleetman-position-simulator \
