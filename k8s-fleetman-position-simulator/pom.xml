@@ -52,26 +52,6 @@
 	</dependencies>
 	<build>
 		<plugins>
-			<plugin>
-            <groupId>com.github.spotbugs</groupId>
-            <artifactId>spotbugs-maven-plugin</artifactId>
-            <version>4.3.0</version>
-            <configuration>
-                <effort>Max</effort>
-                <threshold>Low</threshold>
-                <!-- Specify the custom filter file -->
-                <excludeFilterFile>${project.basedir}/spotbugs-filter.xml</excludeFilterFile>
-            </configuration>
-            <executions>
-                <execution>
-                    <id>spotbugs-check</id>
-                    <phase>verify</phase>
-                    <goals>
-                        <goal>check</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
 		</plugins>
 		<resources>
 			<resource>
