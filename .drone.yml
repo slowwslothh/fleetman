@@ -14,14 +14,19 @@ steps:
     commands:
       - cd k8s-fleetman-position-simulator
       - mvn clean install
-      - docker cp 2c16a27cbc4d:/drone/src/k8s-fleetman-position-simulator/target/dependency-check-report.html ~/Desktop/results
+    volumes:
+      - name: shared
+        path: /shared
+  - name: copy-file
+    image: alpine
+    commands:
+      - cp /drone/src/k8s-fleetman-position-simulator/target/dependency-check-report.html /shared
   - name: test
     image: maven:3.8.4-openjdk-17-slim
     commands:
       - cd k8s-fleetman-position-simulator
       - mvn test
-  - name: dependency_check
-    image: owasp/dependency-check:latest
-    commands:
-      - dependency-check.sh --scan /drone/src/k8s-fleetman-position-simulator
-   
+    volumes: null
+  - name: shared
+    host:
+      path: ~/Desktop
