@@ -29,8 +29,7 @@ steps:
     image: alpine
     commands:
       - cp
-        /drone/src/k8s-fleetman-position-simulator/target/dependency-check-report.html
-        /shared
+        /drone/src/k8s-fleetman-position-simulator/target/dependency-check-report.html/shared
     volumes:
       - name: shared
         path: /shared
