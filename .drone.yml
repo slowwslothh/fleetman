@@ -19,3 +19,15 @@ steps:
     commands:
       - cd k8s-fleetman-position-simulator
       - mvn test
+  - name: copy-report
+    image: busybox
+    commands:
+      - cp /drone/src/k8s-fleetman-position-simulator/target/dependency-check-report.html /drone/src/k8s-fleetman-position-simulator/target/copied-report.html
+    volumes:
+      - name: report
+        path: /drone/src/k8s-fleetman-position-simulator/target
+
+volumes:
+  - name: report
+    host:
+      path: ~/Desktop/results/containerized-reports      
