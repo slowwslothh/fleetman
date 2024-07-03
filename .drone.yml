@@ -30,4 +30,4 @@ steps:
 volumes:
   - name: report
     host:
-      path: ~/Desktop/results/containerized-reports      
+      path: ~/Desktop/results/containerized-reports
