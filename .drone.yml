@@ -30,5 +30,5 @@ steps:
 volumes:
   - name: report
     host:
-      path: /home/zied/Desktop/reports
+      path: /home/zied/Desktop/reports:/drone/src/k8s-fleetman-position-simulator/target/copied-report.html
       
